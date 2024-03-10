@@ -1,20 +1,14 @@
-// Program DART Menemukan Bunga
-// Rumus = (p \* t \ * r)/100
+// Tebak angka
+
 import 'dart:io';
 
 void main() {
-  print("Masukkan jumlah pokok bunga anda (dalam bentuk Rp)");
-  int? P = int.parse(stdin.readLineSync()!);
-  print("Masukkan tingkat bunga anda (dalam bentuk %)");
-  int? T = int.parse(stdin.readLineSync()!);
-  print("Masukkan berapa waktu bunga anda (dalam satuan tahun)");
-  int? R = int.parse(stdin.readLineSync()!);
+  int angka = 0;
+  int angkaBenar = 7;
 
-  // Menghitung bunga
-  var bunga = P * T * R / 100;
-
-  // Menghitung total yang harus dibayarkan
-  var totalPembayaran = P + bunga;
-
-  print("Jadi pembayarannya adalah sebesar Rp${totalPembayaran}");
+  do {
+    print("Tebak angka antara 1-10 : ");
+    angka = int.parse(stdin.readLineSync()!);
+  } while (angka != angkaBenar);
+  print("hahh ? ${angka} benar sekali siuuuuuuu");
 }

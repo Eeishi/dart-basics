@@ -1,12 +1,7 @@
-// Membuat persegi ?
-import 'dart:io';
-
 void main() {
-  print('masukan panjang sisi (cm)');
-  int? sisi = int.parse(stdin.readLineSync()!);
+  List<String> listSholat = ['subuh', 'duhur', 'asar', 'maghrib', 'isya'];
 
-  int keliling = sisi * 4;
-  int luas = sisi * sisi;
-  print(
-      'Persegi dengan panjang ${sisi} mempunyai keliling ${keliling} dan luas ${luas}');
+  for (String sholat in listSholat.reversed) {
+    print(sholat);
+  }
 }

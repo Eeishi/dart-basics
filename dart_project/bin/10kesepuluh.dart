@@ -1,9 +1,12 @@
+// Mencetak kata dan panjangnya
 import 'dart:io';
 
-void main() {
-  print('masukkan string yang akan di ubah ke int');
-  String? text = stdin.readLineSync();
+main() {
+  List<String> listSholat = ['subuh', 'duhur', 'asar', 'maghrib', 'isya'];
+  print(listSholat);
+  for (var sholat in listSholat) {
+    print(sholat);
+  }
 
-  print('sebelum diubah type text adalah ${text.runtimeType}');
-  print('setelah diubah type text adalah ${int.parse(text!).runtimeType}');
+  print("Panjang listSholat = ${listSholat.length}");
 }

@@ -1,11 +1,13 @@
-// Membuat nama lengkap
+// Mencari tahun kabisat
 
 import 'dart:io';
 
 void main() {
-  print('Masukan nama depan anda');
-  String? namaDepan = stdin.readLineSync();
-  print('Masukan nama belakang anda');
-  String? namaBelakang = stdin.readLineSync();
-  print('Nama Lengkap anda adalah ${namaDepan} ${namaBelakang}');
+  print("Masukan tahun? ");
+  int? tahun = int.parse(stdin.readLineSync()!);
+  if (tahun % 4 == 0 || tahun % 400 == 0) {
+    print("tahun ${tahun} termasuk tahun kabisat");
+  } else {
+    print("tahun ${tahun} bukan tahun kabisat");
+  }
 }

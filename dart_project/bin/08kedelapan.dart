@@ -1,16 +1,14 @@
-// program menukar 2 bilangan?
+// Menghitung jumlah digit
+
 import 'dart:io';
 
 void main() {
-  print('masukkan bilangan1= ');
-  int? bilangan1 = int.parse(stdin.readLineSync()!);
-  print('masukkan bilangan2= ');
-  int? bilangan2 = int.parse(stdin.readLineSync()!);
-  print(
-      "sebelum di tukar bilangan1 bernilai ${bilangan1} bilangan2 ${bilangan2}");
-  int saveBilangan1 = bilangan1;
-  bilangan1 = bilangan2;
-  bilangan2 = saveBilangan1;
-  print(
-      "setelah di tukar bilangan1 bernilai ${bilangan1} bilangan2 ${bilangan2}");
+  print("Masukan angka beberapa digit: ");
+  int? angka = int.parse(stdin.readLineSync()!);
+  String panjangAngka = angka.toString();
+  var jumlahDigit = 1;
+  while (jumlahDigit < panjangAngka.length) {
+    jumlahDigit = jumlahDigit + 1;
+  }
+  print(jumlahDigit);
 }
